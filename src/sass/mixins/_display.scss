@@ -1,0 +1,19 @@
+$displays: (none, flex, block, inline-block);
+@mixin make-display($el: $el, $grids: $grid-breakpoints) {
+    @each $display in $displays {
+        #{$el}d__#{$display} {
+            display: $display !important;
+        }
+    }
+    @each $breakpoint in map-keys($grids) {
+        @include make-media-query($breakpoint, $grids) {
+            $prefix: breakpoint-prefix($breakpoint, $grids);
+            @each $display in $displays {
+                #{$el}d#{$prefix}__#{$display} {
+                    display: $display !important;
+                }
+            }
+        }
+    }
+}
+@include make-display();

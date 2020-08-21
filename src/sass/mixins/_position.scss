@@ -1,0 +1,9 @@
+$positions: (relative, absolute, fixed, sticky);
+@mixin make-position($el: $el) {
+    @each $position in $positions {
+        #{$el}position__#{$position} {
+            position: $position !important;
+        }
+    }
+}
+@include make-position();

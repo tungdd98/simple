@@ -1,0 +1,8 @@
+@mixin make-font($el: $el) {
+    @each $font, $size in $fonts {
+        #{$el}font__#{$font} {
+            font-size: $size !important;
+        }
+    }
+}
+@include make-font();
