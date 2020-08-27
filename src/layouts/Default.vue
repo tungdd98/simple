@@ -24,12 +24,14 @@
                         class="el-form__btn el-btn el-bg__gray-1 el-m__5 el-text__success"
                         >Food</span
                     >
-                    <input
-                        type="text"
-                        :placeholder="$t('Search your products from here')"
-                        class="el-form__input el-flex-grow-1"
+                    <the-input
                         v-model="searchQuery"
-                    />
+                        class="el-form__input el-flex-grow-1"
+                        :placeholder="$t('Search your products from here')"
+                        rules="email|required"
+                        name="Key search"
+                    ></the-input>
+
                     <button
                         class="el-btn el-form__search el-px__30 el-bg__success el-text__white el-font__16"
                     >
@@ -206,10 +208,14 @@
 <script>
 import Login from "@/components/Login";
 import Register from "@/components/Register";
+import TheInput from "@/components/TheInput";
+import DirectiveInput from "@/components/DirectiveInput";
 export default {
     components: {
         Login,
-        Register
+        Register,
+        TheInput,
+        DirectiveInput
     },
     data() {
         return {

@@ -9,18 +9,24 @@
             </div>
             <div class="el-login">
                 <div class="el-box-shadow el-p__10 el-mb__30">
-                    <input
-                        type="email"
-                        class="el-form__input el-w-100"
-                        placeholder="Enter email"
-                    />
+                    <the-input
+                        v-model="form.email"
+                        class="el-form__input el-flex-grow-1"
+                        :placeholder="$t('Your email')"
+                        rules="email|required"
+                        name="Email"
+                        type="text"
+                    ></the-input>
                 </div>
                 <div class="el-box-shadow el-p__10 el-mb__30">
-                    <input
+                    <the-input
+                        v-model="form.password"
+                        class="el-form__input el-flex-grow-1"
+                        :placeholder="$t('Your password')"
+                        rules="required"
+                        name="Password"
                         type="password"
-                        class="el-form__input el-w-100"
-                        placeholder="Enter password"
-                    />
+                    ></the-input>
                 </div>
                 <button
                     class="el-w-100 el-btn el-bg__success el-text__white el-box-shadow"
@@ -49,10 +55,13 @@
 </template>
 <script>
 import GoogleLogin from "vue-google-login";
+import TheInput from "@/components/TheInput";
+
 import { mapActions } from "vuex";
 export default {
     components: {
-        GoogleLogin
+        GoogleLogin,
+        TheInput
     },
     data() {
         return {
