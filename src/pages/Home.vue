@@ -85,9 +85,8 @@ export default {
             const data = await this.getMenus(query);
 
             if (data) {
-                if (data.data && data.data.length > data.per_page) {
-                    this.isShowLoadMore = false;
-                }
+                this.isShowLoadMore =
+                    this.page >= data.last_page ? false : true;
                 this.menus =
                     this.page === 1
                         ? data.data || []
@@ -97,6 +96,9 @@ export default {
         async loadMore() {
             await this.fetchData({
                 page: ++this.page
+            });
+            this.$nextTick(() => {
+                window.scrollTo(0, document.body.scrollHeight);
             });
         },
         onResize() {

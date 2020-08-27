@@ -1,7 +1,7 @@
 <template>
-    <div class="el-col__6 el-col-md__4 el-col-lg__3">
+    <div class="el-col__6 el-col-md__4 el-col-lg__3 el-mb__30">
         <div
-            class="el-home-product el-mb__30 el-bg__white el-cursor__pointer el-position__relative"
+            class="el-home-product el-bg__white el-cursor__pointer el-position__relative el-h-100"
         >
             <div class="el-home-product__image el-position__relative">
                 <img
