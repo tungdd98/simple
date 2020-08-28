@@ -16,7 +16,7 @@ const validators = {
 export default {
     data() {
         return {
-            message: "Vàng ăn cứt",
+            message: "Vàng",
             dir: "top",
             value: "",
             validators

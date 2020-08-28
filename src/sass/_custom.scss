@@ -1,6 +1,7 @@
 #layout {
     background-color: rgb(247, 247, 247);
 }
+
 .el-banner {
     height: 100vh;
     width: 100%;
@@ -20,6 +21,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    transition: 0.2s;
 }
 
 .el-btn {
@@ -34,6 +36,7 @@
             outline: none;
         }
         &-sub {
+            background-color: white;
             top: calc(100% + 15px);
             left: 0;
             min-width: 200px;
@@ -243,6 +246,7 @@
 .fade-leave-to {
     opacity: 0;
 }
+
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.3s ease;
@@ -263,4 +267,11 @@
 .slide-height-leave {
     opacity: 1;
     transform: translateZ(0);
+}
+
+.menu-top {
+    background-color: white;
+    position: fixed !important;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 12px;
 }
