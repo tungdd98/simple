@@ -41,6 +41,11 @@
         </div>
         <header
             class="el-header el-position__absolute el-py__20 el-px__20 el-px-lg__50"
+            :class="{
+                'menu-top':
+                    (windowTopLength > 857 && widthScreen > 992) ||
+                    (windowTopLength > 124 && widthScreen <= 992)
+            }"
         >
             <div
                 class="el-container-fluid el-d__flex el-jus__between el-align__center"
@@ -231,7 +236,9 @@ export default {
                     image: "https://img.icons8.com/office/16/000000/england.png"
                 }
             ],
-            langSelected: "en"
+            langSelected: "en",
+            windowTopLength: null,
+            widthScreen: null
         };
     },
     computed: {
@@ -240,6 +247,14 @@ export default {
                 lang => lang.locale === this.langSelected
             );
         }
+    },
+    mounted() {
+        window.addEventListener("scroll", this.onScroll);
+        window.addEventListener("resize", this.onResize);
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.onScroll);
+        window.removeEventListener("resize", this.onResize);
     },
     methods: {
         onSignIn() {
@@ -251,6 +266,15 @@ export default {
         onSelecteLang(locale) {
             this.langSelected = locale;
             this.$i18n.locale = locale;
+        },
+        onScroll(e) {
+            this.windowTop = window.top.scrollY;
+            this.windowTopLength = this.windowTop;
+            console.log("windowTop", this.windowTopLength);
+        },
+        onResize() {
+            this.widthScreen = window.innerWidth;
+            console.log("width nef", this.widthScreen);
         }
     }
 };
