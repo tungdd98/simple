@@ -261,3 +261,6 @@ export default {
     }
 };
 </script>
+<style lang="scss" scoped>
+@import "../sass/main.scss";
+</style>

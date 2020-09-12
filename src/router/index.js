@@ -14,6 +14,17 @@ const routes = [
                 component: () => import("@/pages/Home")
             }
         ]
+    },
+    {
+        path: "/admin",
+        component: () => import("@/layouts/Admin"),
+        children: [
+            {
+                name: "dashboard",
+                path: "",
+                component: () => import("@/pages/admin/Dashboard")
+            }
+        ]
     }
 ];
 
