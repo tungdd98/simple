@@ -131,26 +131,6 @@
                             </ul>
                         </div>
                         <ul class="nav navbar-nav float-right">
-                            <li class="dropdown dropdown-language nav-item">
-                                <a class="dropdown-toggle nav-link" href="#">
-                                    <flag-icon
-                                        size="1.5x"
-                                        class="custom-class"
-                                    ></flag-icon>
-                                    <span class="selected-language"
-                                        >English</span
-                                    >
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">
-                                        <flag-icon
-                                            size="1.5x"
-                                            class="custom-class"
-                                        ></flag-icon>
-                                        English
-                                    </a>
-                                </div>
-                            </li>
                             <li class="nav-item nav-search">
                                 <a class="nav-link nav-link-search">
                                     <search-icon
@@ -159,11 +139,8 @@
                                     ></search-icon>
                                 </a>
                             </li>
-                            <li class="dropdown dropdown-user nav-item">
-                                <a
-                                    class="dropdown-toggle nav-link dropdown-user-link"
-                                    href="#"
-                                >
+                            <li class="dropdown-user nav-item">
+                                <a class="nav-link dropdown-user-link" href="#">
                                     <div class="user-nav d-sm-flex d-none">
                                         <span class="user-name text-bold-600"
                                             >John Doe</span
@@ -180,14 +157,6 @@
                                             width="40"
                                     /></span>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a
-                                        class="dropdown-item"
-                                        href="auth-login.html"
-                                        ><i class="feather icon-power"></i>
-                                        Logout</a
-                                    >
-                                </div>
                             </li>
                         </ul>
                     </div>
