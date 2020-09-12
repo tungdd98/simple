@@ -3,7 +3,11 @@ import App from "./App";
 import router from "./router";
 
 // Icon
-import "@/utils/vue-feather-icon";
+import "@/plugins/vue-feather-icon";
+
+// Components
+import Modal from "@/plugins/modal";
+Vue.use(Modal);
 
 // Store
 import store from "./store";
@@ -11,10 +15,6 @@ import store from "./store";
 // Axios
 import axios from "@/utils/axios";
 Vue.prototype.$axios = axios;
-
-// Components
-import Modal from "@/plugins/modal";
-Vue.use(Modal);
 
 // Lazyload
 import VueLazyload from "vue-lazyload";

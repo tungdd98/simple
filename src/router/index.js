@@ -17,6 +17,9 @@ const routes = [
     },
     {
         path: "/admin",
+        meta: {
+            auth: true
+        },
         component: () => import("@/layouts/Admin"),
         children: [
             {
@@ -28,10 +31,12 @@ const routes = [
     }
 ];
 
-export default new Router({
+const router = new Router({
     mode: "history",
     routes,
     scrollBehavior(to, from, savedPosition) {
         return { x: 0, y: 0 };
     }
 });
+
+export default router;

@@ -56,7 +56,7 @@ export default {
         error: {
             bind(el, binding) {
                 el.vError = document.createElement("div");
-                el.vError.className = "el-font__10 el-text__danger el-error";
+                el.vError.className = "font-small text-danger";
                 el.vError.innerHTML = binding.expression;
             }
         },
