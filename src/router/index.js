@@ -17,9 +17,6 @@ const routes = [
     },
     {
         path: "/admin",
-        meta: {
-            auth: true
-        },
         component: () => import("@/layouts/Admin"),
         children: [
             {
@@ -28,6 +25,11 @@ const routes = [
                 component: () => import("@/pages/admin/Dashboard")
             }
         ]
+    },
+    {
+        path: "/login",
+        name: "login",
+        component: () => import("@/pages/Login")
     }
 ];
 

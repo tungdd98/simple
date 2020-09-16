@@ -7,7 +7,10 @@
             <div class="navbar-header sticky-top bg-white shadow-sm">
                 <ul class="nav navbar-nav flex-row">
                     <li class="nav-item mr-auto">
-                        <a class="navbar-brand" href="#">
+                        <router-link
+                            class="navbar-brand"
+                            :to="{ name: 'login' }"
+                        >
                             <div
                                 class="brand-logo"
                                 :style="{
@@ -15,7 +18,7 @@
                                 }"
                             ></div>
                             <h2 class="brand-text mb-0">Vuexy</h2>
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
             </div>
